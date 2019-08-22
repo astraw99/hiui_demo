@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ThemeContext } from '@hi-ui/hiui/es/context'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// 全局配色生效
+ReactDOM.render(
+    <ThemeContext.Provider value="cyan">
+    <App />
+    </ThemeContext.Provider>,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
